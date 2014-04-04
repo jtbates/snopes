@@ -61,4 +61,4 @@ def complete(name,clf,X=X,y=y,training=training):
     clf.fit(X,y)
     z = clf.predict(training)
     with open(os.path.join(OUTDIR,fn),'w') as f:
-        f.writelines([str(int(p)) + "\n" for p in z])
+        f.writelines([str(int(p)) + "\r\n" for p in z])
