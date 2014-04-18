@@ -30,5 +30,5 @@ mask = np.array(np.sum(full2[n_train:,:],axis=0)).flatten() >= min_nnz
 full3 = full2[:,mask]
 
 from sklearn.linear_model import LogisticRegression
-clf = LogisticRegression(C=.005)
+clf = LogisticRegression(C=.006)
 complete("lr1",clf,full3[:n_train],y,full3[n_train:])
